@@ -1,24 +1,11 @@
+import 'dart:io';
+
 void main() {
-  /* String color = "blue";
-  print("Fvrt color is $color");
+  print("Enter your marks");
+  String? input = stdin.readLineSync();
+  int marks = int.parse(input!);
+ 
+  if (marks >= 50) print("You are pass");
 
-  String food = "pizza";
-  print("Fvrt food is $food");
-
-  int number = 10;
-
-  print("Fvrt number is $number");
-
-  bool likeflutter = true;
-  print(" I like flutter? $likeflutter");*/
-
-  int a = 25;
-  int b = 4;
-
-  print(a + b);
-  print(a - b);
-    print(a * b);
-    print(a / b);
-      print(a % b);
-
+  if (marks < 50) print("Fail");
 }
