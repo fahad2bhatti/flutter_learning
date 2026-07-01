@@ -1,17 +1,24 @@
 import 'dart:io';
 
 void main() {
-  print("Enter your marks");
-  String? input = stdin.readLineSync();
-  int marks = int.parse(input!);
+  String? name;
+  name = null;
+  print(name);
 
-  if (marks >= 90) print("Grade A");
-  else if (marks >= 80) print("Grade B");
-  else if (marks >= 70) print("Grade C");
-  else if (marks >= 60) print("Grade D");
-  else if (marks >= 50) print("Grade E");
-  else {
-    print("fail");
+  String? section = "nine A";
+  print(section);
 
+  String? Name;
+  String DisplayName = Name ?? "guest";
+  print(DisplayName);
+
+  int? age; 
+  if (age?.isEven ?? false) {
+    print("Age is even");
+  } else {
+    print("Age is odd");
   }
+
+  int? height;
+  print(height?.isEven);
 }
