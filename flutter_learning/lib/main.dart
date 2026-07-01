@@ -1,24 +1,27 @@
-import 'dart:io';
+import 'dart:ffi';
+
+double calculateArea({required double length, double width = 10}) {
+  return length * width;
+}
+
+
+
+int add(int a, int b) {
+  return a + b;
+}
+
+bool isEven(int number) {
+  if (number % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+void sayHello(String name, [String? greeting]) {
+  print("hello $name and ${greeting ?? 'Hello'}");
+}
 
 void main() {
-  String? name;
-  name = null;
-  print(name);
-
-  String? section = "nine A";
-  print(section);
-
-  String? name2;
-  String displayName = name2 ?? "guest";
-  print(displayName);
-
-  int? age;
-  if (age?.isEven ?? false) {
-    print("Age is even");
-  } else {
-    print("Age is odd");
-  }
-
-  int? height;
-  print(height?.isEven);
+  sayHello("Fahad");
+  sayHello("fahad", "salam");
 }
