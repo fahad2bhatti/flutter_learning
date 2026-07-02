@@ -1,23 +1,32 @@
+class Student {
+  String name;
+  int age;
+
+  Student(this.name, this.age);
+
+  void introduce() {
+    print("hi i am $name, and my age  $age");
+  }
+}
+
+class Book {
+  String title;
+  String author;
+  int page;
+
+  Book(this.title, this.page, this.author);
+
+  void showDetails() {
+    print("Title of this Book is $title ");
+    print("This book has $page pages ");
+    print("Author of this Book is $author ");
+  }
+}
+
 void main() {
-  List<String> subjects = ["English", "Math", "Urdu"];
-  print(subjects);
-  subjects.add("computer");
-  subjects.forEach((subject) {
-    print("I study : $subject");
-  });
+  Book b1 = Book("Atomic habit", 100, "James Clear");
+  b1.showDetails();
 
-  List<int> numbers = [10, 15, 20, 25, 30, 35, 40, 50, 60];
-  print(numbers);
-
-  var doubleNumbers = numbers.map((n) => n * 2);
-  print(doubleNumbers.toList());
-
-  var bigNumber = numbers.where((n) => n > 20);
-  print(bigNumber.toList());
-
-  var evenNumbers = numbers.where((n) => n % 2 == 0);
-  print(evenNumbers.toList());
-
-  var oddNumbers = numbers.where((n) => n % 2 != 0);
-  print(oddNumbers.toList());
+  Student s1 = Student("Fahad", 21);
+  s1.introduce();
 }
