@@ -3,10 +3,10 @@ class Student {
   int age;
 
   Student(this.name, this.age);
+  Student.withoutAge(this.name) : age = 0;
+  Student.guest() : name = "guest", age = 0;
 
-  void introduce() {
-    print("hi i am $name, and my age  $age");
-  }
+  void introduce() {}
 }
 
 class Book {
@@ -15,6 +15,7 @@ class Book {
   int page;
 
   Book(this.title, this.page, this.author);
+  Book.unknown() : title = "Unknown title", author = "unknown Author", page = 0;
 
   void showDetails() {
     print("Title of this Book is $title ");
@@ -25,8 +26,15 @@ class Book {
 
 void main() {
   Book b1 = Book("Atomic habit", 100, "James Clear");
+  Book b2 = Book.unknown();
   b1.showDetails();
+  b2.showDetails();
 
   Student s1 = Student("Fahad", 21);
-  s1.introduce();
+  Student s2 = Student.withoutAge("Ali");
+  Student s3 = Student.guest();
+  print(s1.name);
+  print(s2.name);
+  print(s2.age);
+  print(s3.name);
 }
